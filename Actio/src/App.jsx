@@ -10,7 +10,7 @@ function App() {
         <div className="Menu"> </div>
         <div className="Title">
           {/* <div className="Logo">Circulo</div>
-          <img src={imgNave} alt="Nave espacial" className="NAVE" /> */}
+          <img src={imgNave} alt="Nave espacial" className="NAVE" /> */ }
           <img className="Logo" src={imgNave} alt="ACO LOGO" />
           <div className="tiText">
             <h3>ILHUICALLI</h3>
