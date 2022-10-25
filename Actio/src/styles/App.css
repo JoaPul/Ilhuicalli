@@ -25,7 +25,7 @@ body {
   align-content: center;
   justify-content: center;
   flex-direction: column;
-  border: 3px solid green;
+  /* border: 3px solid green; */
   transform: scale(.62);
   height: 355px;
 }
