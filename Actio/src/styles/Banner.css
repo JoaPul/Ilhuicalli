@@ -1,4 +1,4 @@
-/*Bnner*/
+/*Banner*/
 .Banner {
   background-color: transparent;
   height: 70px;
@@ -19,7 +19,7 @@
   height: 355px;
 }
 
-/*EL TEXTO ENMEDIO*/
+/*?EL TEXTO ENMEDIO*/
 .Title {
   /* margin-top: 10px; */
   height: 100px;
@@ -109,7 +109,7 @@
   width: 10px;
 }
 
-/*MENU*/
+/*?MENU*/
 .Menu {
   display: flex;
   flex-direction: column;
@@ -134,11 +134,60 @@
   background-color: rgb(216 132 146);
   border-radius: 10px;
   transform: scale(1);
-  transition: border .25s, transform .25s, background-color .25s ease-out;
+  transition: border .25s ease-out, transform .25s ease-out, background-color .25s ease-out;
 }
 
 .BMenu:hover .barra {
   background-color: rgb(205 184 157);
   transform: scale(1.053);
   border: 0px;
+}
+
+/*?LANGUAGES*/
+.PARTS {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  color: #CAD0D6;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.ChLang {
+  margin-right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 100%;
+}
+
+.contBall {
+  width: 100%;
+  height: 30px;
+  margin: 10px;
+  border-radius: 30px;
+  border: 3px solid rgb(216 132 146);
+  transition: border .25s ease-out;
+}
+
+.Ball {
+  border-radius: 50%;
+  background-color: rgb(216 132 146);
+  height: 75%;
+  width: 25px;
+  position: relative;
+  color: transparent;
+  top: 3px;
+  left: 3px;
+  transition: background-color .25s ease-out, left .25s ease-out;
+}
+
+.contBall:hover .Ball {
+  left: 65%;
+  background-color: rgb(205 184 157);
+}
+
+.contBall:hover {
+  border: 3px solid rgb(205 184 157);
 }

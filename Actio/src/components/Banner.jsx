@@ -26,7 +26,15 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <div className="PARTS"> </div>
+      <div className="PARTS">
+        <div className="ChLang">
+          <h3>English</h3>
+          <div className="contBall">
+            <div className="Ball">.</div>
+          </div>
+          <h3>Español</h3>
+        </div>
+      </div>
     </section>
   );
 };
