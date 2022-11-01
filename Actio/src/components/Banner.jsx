@@ -21,6 +21,7 @@ const Banner = () => {
           </div>
           <img className="Logo" src={imgNave} alt="LOGO" />
           <div className="tiText">
+            {/* espacio exterior: iluikali */}
             <h3>ILHUICALLI</h3>
             <h1>SPACE TRAVEL</h1>
           </div>
