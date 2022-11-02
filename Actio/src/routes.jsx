@@ -6,27 +6,54 @@ import { Navigate, useRoutes } from 'react-router-dom';
 
 // pages
 import App from './pages/App';
+import Travel from './pages/Travel';
+import Register from './pages/Register';
+import Login from './pages/Login';
+import Wishlist from './pages/Wishlist';
+import Cart from './pages/Cart';
+import Profile from './pages/Profile';
 
 const Path = () => {
+  // TODO: necesito routear a las primeras hijas por defecto sin quitar la
+  // opcion de poder acceder a las demas rutas hijas, (index: true) no sirve
   const element = useRoutes([
     {
       path: '/',
-      element: <Navigate to="/home" replace />,
+      element: <Navigate to="/Home" replace />,
     },
     {
-      path: '/home',
+      path: '/Home',
       element: <App />,
-      children: [
-        {
-          path: ':lan',
-          index: true,
-        },
-      ],
+    },
+    {
+      path: '/Ignition',
+      element: <Travel />,
+    },
+    {
+      path: '/User/Register',
+      element: <Register />,
+    },
+    {
+      path: '/User/Login',
+      element: <Login />,
+    },
+    {
+      path: '/User/Profile',
+      element: <Profile />,
+    },
+    {
+      path: '/User/WishList',
+      element: <Wishlist />,
+    },
+    {
+      path: '/User/Cart',
+      element: <Cart />,
     },
     // componente "page not found"
     {
       path: '/404',
-      element: <p style={{ fontFamily: 'Fredoka', fontSize: '20px', textAlign: 'center' }}>Page not found</p>,
+      // eslint-disable-next-line object-curly-newline
+      element: <p style={{ fontFamily: 'Fredoka', fontSize: '20px', textAlign: 'center', color: '#CAD0D6' }}>Page not found</p>,
     },
     {
       path: '*',
