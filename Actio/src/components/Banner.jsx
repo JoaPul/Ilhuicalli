@@ -1,10 +1,21 @@
 /* eslint-disable arrow-body-style */
 import React from 'react';
+
+// hooks
+import { useDispatch, useSelector } from 'react-redux';
+
+// Slice
+import { toChange, selectLang } from '../features/Language/langSlice';
+
+// img y styles
 import imgNave from '../assets/NaveColor1.1.png';
 import '../styles/Banner.css';
 
 // eslint-disable-next-line react/function-component-definition
 const Banner = () => {
+  const dispatch = useDispatch();
+  const lang = useSelector(selectLang);
+
   return (
     <section className="Banner">
       <div className="Menu">
@@ -30,9 +41,19 @@ const Banner = () => {
       <div className="PARTS">
         <div className="ChLang">
           <h3>English</h3>
-          <div className="contBall">
-            <div className="Ball">.</div>
-          </div>
+          <button
+            type="button"
+            className="contBall"
+            onClick={() => dispatch(toChange())}
+            style={lang ? { border: '3px solid rgb(216 132 146)' } : { border: '3px solid rgb(205 184 157)' }}
+          >
+            <div
+              className="Ball"
+              style={lang ? { left: '3px', backgroundColor: 'rgb(216 132 146)' } : { left: '71%', backgroundColor: 'rgb(205 184 157)' }}
+            >
+              .
+            </div>
+          </button>
           <h3>Español</h3>
         </div>
       </div>
