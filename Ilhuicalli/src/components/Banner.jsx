@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 // Slice
 import { toChange, selectLang } from '../features/Language/langSlice';
+import { toApear, selectMenu } from '../features/Menu/menuSlice';
 
 // img y styles
 import imgNave from '../assets/NaveColor1.1.png';
@@ -16,36 +17,11 @@ import '../styles/Banner.css';
 const Banner = () => {
   const dispatch = useDispatch();
   const lang = useSelector(selectLang);
+  const menu = useSelector(selectMenu);
 
   return (
     <section className="Banner">
-      <div className="Menu">
-        <div className="contHamb">
-          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-          <label type="button" className="BMenu" htmlFor="men">
-            <div className="barra"> </div>
-            <div className="barra"> </div>
-            <div className="barra"> </div>
-          </label>
-          <input type="checkbox" id="men" className="nav-input" />
-          <div className="navApear">
-            <Link
-              rel="stylesheet"
-              to="/FlightManifest"
-              className="menuOptions"
-            >
-              <h1>{lang ? 'Manifest' : 'Manifiesto'}</h1>
-            </Link>
-            <Link
-              rel="stylesheet"
-              to="/Ignition"
-              className="menuOptions"
-            >
-              <h1>{lang ? 'Ignition' : 'Ignición'}</h1>
-            </Link>
-          </div>
-        </div>
-      </div>
+
       <div className="Title">
         <div className="contLogo">
           <div className="rombo">
@@ -59,9 +35,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      {/* // ver si vas a cambiar esto de language
-      para que todo este en ingles o solo cambiar que en
-      los idiomas este rosa pero con hove reste amarillo */}
+      <div className="User" />
       <div className="PARTS">
         <div className="ChLang">
           <h3>English</h3>
@@ -82,6 +56,45 @@ const Banner = () => {
           <h3>Español</h3>
         </div>
       </div>
+      <div className="Menu">
+        <div className="contHamb">
+          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+          <label type="button" className="BMenu" htmlFor="men">
+            <div
+              className="barra0"
+              style={menu ? { transform: 'rotate(0deg)' } : { transform: 'rotate(45deg) translateY(14px) translateX(14px) ' }}
+            />
+            <div
+              className="barra1"
+              style={menu ? { transform: 'rotate(0deg)' } : { transform: 'rotate(45deg)' }}
+            />
+            <div
+              className="barra2"
+              style={menu ? { transform: 'rotate(0deg)' } : { transform: 'rotate(-45deg) translateY(-14px) translateX(14px)  ' }}
+            />
+          </label>
+          <input type="checkbox" id="men" className="nav-input" onClick={() => dispatch(toApear())} />
+          <div className="navApear">
+            <Link
+              rel="stylesheet"
+              to="/FlightManifest"
+              className="menuOptions"
+              onClick={() => dispatch(toApear())}
+            >
+              <h1>{lang ? 'Itinerary' : 'Itinerario'}</h1>
+            </Link>
+            <Link
+              rel="stylesheet"
+              to="/Ready-To-Ignition"
+              className="menuOptions"
+              onClick={() => dispatch(toApear())}
+            >
+              <h1>{lang ? 'Book a flight' : 'Reserva un vuelo'}</h1>
+            </Link>
+          </div>
+        </div>
+      </div>
+
     </section>
   );
 };

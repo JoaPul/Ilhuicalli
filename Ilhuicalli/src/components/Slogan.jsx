@@ -26,7 +26,7 @@ const Slogan = () => {
           <div className="slo">
             <h2>Creando experiencias</h2>
             <h1>fuera de este mundo</h1>
-            <h2>con los viajes</h2>
+            <h2>viajando</h2>
           </div>
         )}
       <button type="button" className="startBTN">

@@ -2,10 +2,10 @@
 /* eslint-disable react/function-component-definition */
 import React from 'react';
 
-const Travel = () => {
+const Ignition = () => {
   return (
-    <div>Viaje</div>
+    <div>Ignition</div>
   );
 };
 
-export default Travel;
+export default Ignition;

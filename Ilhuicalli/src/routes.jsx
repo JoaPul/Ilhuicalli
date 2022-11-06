@@ -6,12 +6,13 @@ import { Navigate, useRoutes } from 'react-router-dom';
 
 // pages
 import App from './pages/App';
-import Travel from './pages/Travel';
+import Ignition from './pages/Ignition';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Wishlist from './pages/Wishlist';
 import Cart from './pages/Cart';
 import Profile from './pages/Profile';
+import Itinerary from './pages/Itinerary';
 
 const Path = () => {
   // TODO: necesito routear a las primeras hijas por defecto sin quitar la
@@ -27,10 +28,11 @@ const Path = () => {
     },
     {
       path: '/FlightManifest',
+      element: <Itinerary />,
     },
     {
-      path: '/Ignition',
-      element: <Travel />,
+      path: '/Ready-To-Ignition',
+      element: <Ignition />,
     },
     {
       path: '/User/Register',
