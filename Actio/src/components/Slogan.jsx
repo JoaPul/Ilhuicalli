@@ -6,6 +6,9 @@ import { useSelector } from 'react-redux';
 // from Slice
 import { selectLang } from '../features/Language/langSlice';
 
+// styles
+import '../styles/Slogan.css';
+
 const Slogan = () => {
   const lang = useSelector(selectLang);
 

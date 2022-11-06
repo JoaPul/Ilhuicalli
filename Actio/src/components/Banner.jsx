@@ -1,5 +1,6 @@
 /* eslint-disable arrow-body-style */
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // hooks
 import { useDispatch, useSelector } from 'react-redux';
@@ -19,10 +20,30 @@ const Banner = () => {
   return (
     <section className="Banner">
       <div className="Menu">
-        <div className="BMenu">
-          <div className="barra">.</div>
-          <div className="barra">.</div>
-          <div className="barra">.</div>
+        <div className="contHamb">
+          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+          <label type="button" className="BMenu" htmlFor="men">
+            <div className="barra"> </div>
+            <div className="barra"> </div>
+            <div className="barra"> </div>
+          </label>
+          <input type="checkbox" id="men" className="nav-input" />
+          <div className="navApear">
+            <Link
+              rel="stylesheet"
+              to="/FlightManifest"
+              className="menuOptions"
+            >
+              <h1>{lang ? 'Manifest' : 'Manifiesto'}</h1>
+            </Link>
+            <Link
+              rel="stylesheet"
+              to="/Ignition"
+              className="menuOptions"
+            >
+              <h1>{lang ? 'Ignition' : 'Ignición'}</h1>
+            </Link>
+          </div>
         </div>
       </div>
       <div className="Title">
@@ -38,6 +59,9 @@ const Banner = () => {
           </div>
         </div>
       </div>
+      {/* // ver si vas a cambiar esto de language
+      para que todo este en ingles o solo cambiar que en
+      los idiomas este rosa pero con hove reste amarillo */}
       <div className="PARTS">
         <div className="ChLang">
           <h3>English</h3>
@@ -45,11 +69,12 @@ const Banner = () => {
             type="button"
             className="contBall"
             onClick={() => dispatch(toChange())}
-            style={lang ? { border: '3px solid rgb(216 132 146)' } : { border: '3px solid rgb(205 184 157)' }}
+          //  style={lang ? { border: '3px solid rgb(216 132 146)' }
+          //  : { border: '3px solid rgb(205 184 157)' }}
           >
             <div
               className="Ball"
-              style={lang ? { left: '3px', backgroundColor: 'rgb(216 132 146)' } : { left: '71%', backgroundColor: 'rgb(205 184 157)' }}
+              style={lang ? { left: '3px' } : { left: '71%' }}
             >
               .
             </div>

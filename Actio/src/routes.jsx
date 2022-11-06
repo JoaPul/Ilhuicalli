@@ -26,6 +26,9 @@ const Path = () => {
       element: <App />,
     },
     {
+      path: '/FlightManifest',
+    },
+    {
       path: '/Ignition',
       element: <Travel />,
     },

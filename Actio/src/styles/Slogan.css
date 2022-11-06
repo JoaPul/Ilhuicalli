@@ -1,0 +1,110 @@
+/*SLOGAN*/
+.contSlo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 50%;
+  flex-direction: column;
+}
+
+.slo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #CAD0D6;
+  position: relative;
+  top: 200px;
+  /* left: 0px; */
+}
+
+.slo h2 {
+  font-size: 50px;
+}
+
+.slo h1 {
+  font-size: 80px;
+  color: #6F96C7;
+  /* color: #375286; */
+}
+
+.startBTN {
+  border-radius: 10px;
+  width: fit-content;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  top: 250px;
+  border: 1px solid black;
+  /* left: 30px; */
+  padding: 10px;
+  text-align: center;
+  box-shadow: 5px 5px 0px #4c6788;
+  background-color: #CAD0D6;
+  color: #6F96C7;
+  transition: box-shadow .25s ease-out, background-color .25s ease-out, color .25s ease-out;
+  cursor: pointer;
+}
+
+.startBTN:hover {
+  box-shadow: 5px 5px 0px #68181F;
+  background-color: rgb(216 132 146);
+  color: #CAD0D6;
+}
+
+.startBTN:active {
+  box-shadow: 5px 5px 0px rgb(205 184 157);
+  background-color: #31233C;
+  color: #F6ECDD;
+}
+
+/*NAVE*/
+.ship {
+  border: 3px solid red;
+  height: 50px;
+  width: 50px;
+  position: relative;
+  top: 300px;
+  left: 100px;
+}
+
+.ship-rotate {
+  height: 22px;
+  width: 22px;
+  border: 1px solid green;
+  position: absolute;
+  left: 10px;
+}
+
+.pod {
+  height: 16px;
+  width: 16px;
+  background-color: white;
+  border-radius: 100% 0 100% 0;
+  transform: rotate(0deg);
+  color: transparent;
+  position: absolute;
+  left: 10px;
+}
+
+.fuselage {
+  position: absolute;
+  height: 8px;
+  width: 12px;
+  background: white;
+  border-radius: 100% 100% 0 0;
+  top: 12px;
+  left: 5px;
+  transform: rotate(45deg);
+  color: transparent
+}
+
+.fuselage::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 6px solid red;
+}
