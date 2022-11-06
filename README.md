@@ -1,5 +1,5 @@
 # ILHICALLI
 
-ILHUICALLI it's a Space travel airline
+A Space travel airline
 
-## ILHUICALLI it's a nahuatl word to describe the space above us.
+## ILHUICALLI the nahuatl word to describe the space above us.
