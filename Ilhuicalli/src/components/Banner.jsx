@@ -1,5 +1,5 @@
 /* eslint-disable arrow-body-style */
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 // hooks
@@ -19,9 +19,14 @@ const Banner = () => {
   const lang = useSelector(selectLang);
   const menu = useSelector(selectMenu);
 
+  useEffect(() => {
+    if (!menu) {
+      dispatch(toApear());
+    }
+  }, []);
+
   return (
     <section className="Banner">
-
       <div className="Title">
         <div className="contLogo">
           <div className="rombo">
@@ -75,6 +80,14 @@ const Banner = () => {
           </label>
           <input type="checkbox" id="men" className="nav-input" onClick={() => dispatch(toApear())} />
           <div className="navApear">
+            <a
+              // rel="stylesheet"
+              href="https://github.com/JoaPul/Ilhuicalli"
+              className="menuOptions"
+              onClick={() => dispatch(toApear())}
+            >
+              <h1>{lang ? 'Repository' : 'Repositorio'}</h1>
+            </a>
             <Link
               rel="stylesheet"
               to="/FlightManifest"

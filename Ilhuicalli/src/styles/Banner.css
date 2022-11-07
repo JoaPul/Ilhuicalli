@@ -169,7 +169,7 @@
   display: grid;
   grid-auto-flow: row;
   align-content: space-evenly;
-  background-color: #6f97c7a8;
+  background-color: #6f97c7;
   height: 99vh;
   clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
   transition: clip-path .25s ease-in-out;
@@ -192,6 +192,7 @@
 .menuOptions h1 {
   padding-top: 7px;
   padding-bottom: 7px;
+  font-size: 24px;
 }
 
 .menuOptions:hover {

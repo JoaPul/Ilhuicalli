@@ -2,9 +2,14 @@
 /* eslint-disable react/function-component-definition */
 import React from 'react';
 
+// Components
+import Banner from '../components/Banner';
+
 const Itinerary = () => {
   return (
-    <div>Itinerary</div>
+    <section className="Ityne">
+      <Banner />
+    </section>
   );
 };
 
