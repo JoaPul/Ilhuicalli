@@ -1,13 +1,14 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable arrow-body-style */
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 // hooks
 import { useDispatch, useSelector } from 'react-redux';
 
 // Slice
 import { toChange, selectLang } from '../features/Language/langSlice';
-import { toApear, selectMenu } from '../features/Menu/menuSlice';
 
 // img y styles
 import imgNave from '../assets/NaveColor1.1.png';
@@ -17,18 +18,17 @@ import '../styles/Banner.css';
 const Banner = () => {
   const dispatch = useDispatch();
   const lang = useSelector(selectLang);
-  const menu = useSelector(selectMenu);
+  const navigate = useNavigate();
+  const [checked, setChecked] = useState(false);
 
-  useEffect(() => {
-    if (!menu) {
-      dispatch(toApear());
-    }
-  }, []);
+  const hadleChange = () => {
+    setChecked((current) => !current);
+  };
 
   return (
     <section className="Banner">
       <div className="Title">
-        <div className="contLogo">
+        <div className="contLogo" onClick={() => navigate('/')}>
           <div className="rombo">
             <h1>rombo</h1>
           </div>
@@ -67,24 +67,23 @@ const Banner = () => {
           <label type="button" className="BMenu" htmlFor="men">
             <div
               className="barra0"
-              style={menu ? { transform: 'rotate(0deg)' } : { transform: 'rotate(45deg) translateY(14px) translateX(14px) ' }}
+              style={!checked ? { transform: 'rotate(0deg)' } : { transform: 'rotate(45deg) translateY(14px) translateX(14px) ' }}
             />
             <div
               className="barra1"
-              style={menu ? { transform: 'rotate(0deg)' } : { transform: 'rotate(45deg)' }}
+              style={!checked ? { transform: 'rotate(0deg)' } : { transform: 'rotate(45deg)' }}
             />
             <div
               className="barra2"
-              style={menu ? { transform: 'rotate(0deg)' } : { transform: 'rotate(-45deg) translateY(-14px) translateX(14px)  ' }}
+              style={!checked ? { transform: 'rotate(0deg)' } : { transform: 'rotate(-45deg) translateY(-14px) translateX(14px)  ' }}
             />
           </label>
-          <input type="checkbox" id="men" className="nav-input" onClick={() => dispatch(toApear())} />
+          <input type="checkbox" id="men" className="nav-input" value={checked} onChange={hadleChange} />
           <div className="navApear">
             <a
               // rel="stylesheet"
               href="https://github.com/JoaPul/Ilhuicalli"
               className="menuOptions"
-              onClick={() => dispatch(toApear())}
             >
               <h1>{lang ? 'Repository' : 'Repositorio'}</h1>
             </a>
@@ -92,7 +91,6 @@ const Banner = () => {
               rel="stylesheet"
               to="/FlightManifest"
               className="menuOptions"
-              onClick={() => dispatch(toApear())}
             >
               <h1>{lang ? 'Itinerary' : 'Itinerario'}</h1>
             </Link>
@@ -100,7 +98,6 @@ const Banner = () => {
               rel="stylesheet"
               to="/Ready-To-Ignition"
               className="menuOptions"
-              onClick={() => dispatch(toApear())}
             >
               <h1>{lang ? 'Book a flight' : 'Reserva un vuelo'}</h1>
             </Link>

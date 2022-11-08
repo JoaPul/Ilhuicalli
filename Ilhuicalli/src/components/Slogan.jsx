@@ -1,6 +1,8 @@
 /* eslint-disable arrow-body-style */
 /* eslint-disable react/function-component-definition */
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 // hooks
 import { useSelector } from 'react-redux';
 // from Slice
@@ -11,6 +13,7 @@ import '../styles/Slogan.css';
 
 const Slogan = () => {
   const lang = useSelector(selectLang);
+  const navigate = useNavigate();
 
   return (
     <section className="contSlo">
@@ -29,7 +32,7 @@ const Slogan = () => {
             <h2>viajando</h2>
           </div>
         )}
-      <button type="button" className="startBTN">
+      <button type="button" className="startBTN" onClick={() => navigate('/FlightManifest')}>
         {lang
           ? (
             <div>

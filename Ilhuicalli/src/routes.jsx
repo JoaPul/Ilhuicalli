@@ -30,7 +30,7 @@ const Path = () => {
       path: '/FlightManifest',
       element: <Itinerary />,
     },
-    {
+    { // book a flight
       path: '/Ready-To-Ignition',
       element: <Ignition />,
     },

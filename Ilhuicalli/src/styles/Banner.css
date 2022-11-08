@@ -17,6 +17,7 @@
   /* border: 3px solid green; */
   transform: scale(.62);
   height: 355px;
+  cursor: pointer;
 }
 
 /*?EL TEXTO ENMEDIO*/

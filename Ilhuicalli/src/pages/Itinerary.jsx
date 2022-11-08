@@ -9,6 +9,10 @@ const Itinerary = () => {
   return (
     <section className="Ityne">
       <Banner />
+      <div className="planConCohete">.</div>
+      <div className="trajesEspaaciales">.</div>
+      <div className="PlanDeVuelo">.</div>
+      <div className="testimonios">.</div>
     </section>
   );
 };
