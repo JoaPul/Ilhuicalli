@@ -1,7 +1,7 @@
 /*Banner*/
 .Banner {
   background-color: transparent;
-  height: 70px;
+  height: 150px;
   display: grid;
   grid-template-columns: 4fr 2fr 2fr 1fr;
   grid-template-rows: 1fr;

@@ -1,0 +1,85 @@
+.Capsules {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  gap: 30px;
+  /* background-color: ; */
+}
+
+.h1Cap {
+  font-family: 'Poppins', sans-serif;
+  color: rgb(205 184 157);
+  color: rgb(216 132 146);
+  font-size: 40px;
+}
+
+
+.contDrag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 30px;
+}
+
+.Dragon1,
+.Dragon2 {
+  font-family: 'Poppins', sans-serif;
+  height: 70vh;
+  width: 40%;
+  background-color: #31233C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  box-shadow: 8px 5px 0px #6F96C7;
+  border-radius: 20px;
+  transition: box-shadow .25s ease-out;
+  /* border:3px solid #68181F; */
+}
+
+.Dragon1:hover,
+.Dragon2:hover {
+  box-shadow: 12px 10px 0px #6F96C7;
+  box-shadow: 12px 10px 0px rgb(205 184 157);
+}
+
+.contInfo {
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Dragon1 h2,
+.Dragon2 h2 {
+  font-size: 35px;
+  color: #6F96C7;
+  /* text-decoration: underline;
+  text-decoration-thickness: 5px; */
+}
+
+.Dragon1 p,
+.Dragon2 p {
+  padding: 20px;
+  color: #CAD0D6;
+}
+
+.Dragon1 img,
+.Dragon2 img {
+  height: inherit;
+  width: inherit;
+  object-fit: cover;
+}
+
+.Dragon2 img {
+  border-radius: 20px 0 0 20px;
+}
+
+.Dragon1 img {
+  border-radius: 0 20px 20px 0;
+}
